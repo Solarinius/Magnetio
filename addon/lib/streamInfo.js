@@ -32,7 +32,6 @@ export function toStreamInfo(record, config) {
   const stream = {
     name,
     title: description,
-    description,
     behaviorHints: {
       bingeGroup:      getBingeGroup(record, quality),
       filename:        filename || undefined,
@@ -49,7 +48,6 @@ export function toStreamInfo(record, config) {
     const proxyLabel = config.proxyUrl ? '🛡️ VPN Proxy' : '🛡️ Privacy Proxy';
     const proxyDesc = description + '\n' + proxyLabel;
     stream.title = proxyDesc;
-    stream.description = proxyDesc;
   } else {
     stream.infoHash = record.infoHash;
     stream.fileIdx = fileIdx;
