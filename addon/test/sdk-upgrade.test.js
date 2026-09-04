@@ -179,7 +179,7 @@ test('stream info uses the Stremio-compatible infoHash contract and subtitle mat
   assert.equal(stream.sources, undefined);
   assert.equal(stream.behaviorHints.filename, 'Example.Release.1080p.WEB-DL.x265');
   assert.equal(stream.behaviorHints.videoSize, 2 * 1024 * 1024 * 1024);
-  assert.match(stream.description, /WEB-DL/);
+  assert.match(stream.title, /WEB-DL/);
 });
 
 test('OpenSubtitles API requests explicitly accept JSON responses', () => {
