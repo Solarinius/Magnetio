@@ -31,6 +31,7 @@ export function toStreamInfo(record, config) {
 
   const stream = {
     name,
+    // description removed for compatibility with Stremio desktop for windows (App Version: 6.0.1-beta.09)
     title: description,
     behaviorHints: {
       bingeGroup:      getBingeGroup(record, quality),
